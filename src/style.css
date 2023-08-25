@@ -1,0 +1,352 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	/* color: white; make all text white for dark theme */
+}
+
+body {
+	/* background-color: #000; */
+}
+
+ul.navbar {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	/* display: block; */
+	
+}
+
+/* ul li {
+	display: inline;
+	padding: 0px 10px;
+	
+} below is second way */
+
+.navbar li {
+	display: inline;
+	padding: 0px 10px;
+	
+}
+
+.topnav {
+	background-color: #353535; /*was black*/
+	padding: 20px 1px;
+	width: 100%;
+	top: 0; /*top of page*/
+	/* left: 0; */
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+a.nav-link {
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	padding: 20px 10px; /*increase the part that gets highlighted*/
+}
+
+.topnav a:hover {
+	color: gray;
+/* 	background-color: white;*/
+}
+
+#activetab { /* active tab for navigation bar */
+	color: white;
+	text-decoration: underline;
+}
+
+#logo {
+	display: inline;
+	text-decoration: none;
+	color: white;
+	margin: 0 10px 0 10px;
+}
+
+#cake-logo { /* panel logo text */
+	color: yellow;
+	/* font-weight: bold; */
+}
+
+#greet {
+	color: white;
+	float: right;
+	position: relative;
+	right: 1em;
+/* 	top: 0;
+	display: block; */
+}
+
+.top-text { /* Holds the index page greeting */
+	position: relative;
+    left: 1em;
+    margin: 1em 1em;
+}
+
+/*Holds the top info boxes*/
+.top-info {
+	display: flex;
+	flex-direction: row;
+	/* align-items: stretch; */
+	/* border: 1px solid black; */
+	/* min-width: 700px;
+	max-width: 1300px; */
+	width: 1300px;
+	margin: 0 auto; /*center the div in the page*/
+	justify-content: center; /*center the info boxes*/
+}
+
+.info-box {
+	border: 2px solid #896937; /* #fff #cfcac2 */
+	background-color: #6a6a6a;
+	border-radius: 5px;
+	/* margin: 0 15px; */
+	/* text-align: center; */
+	min-width: 250px;
+	min-height: 20px;
+	line-height: 50px;
+	flex: 1; /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex - auto stretch */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+
+.info-box:not(:last-child) { 
+/* override for the above - adds space between the info boxes but still lines up 
+with the table edges */
+	margin-right: 35px;
+}
+
+.info-box p { /* descendant selector - p tags in info-box class */
+	color: white; /* numbers in boxes */
+	display: inline;
+	text-align: right;
+	padding: 0 5px 0 0;
+	position: relative;
+	float: right;
+}
+
+.info-box h2 { /* unused in boxes */
+	color: white;
+	text-align: left;
+	display: inline;
+}
+
+.info-box h3 { /* titles in boxes */
+	color: white;
+	text-align: left;
+	display: inline;
+	padding: 0 0 0 5px;
+}
+
+/*log table*/
+.table-container {
+	margin: 10px auto;
+	/* width: 90%; */
+}
+
+.log-table {
+	margin: 40px auto; /*center the table*/
+	width: 1300px;
+}
+
+.log-table th, td { /* all table cells */
+	padding: 5px 10px; /* pad out the cells */
+	text-align: center;
+	/* border: 1px solid black; */
+	
+}
+
+.log-table tr { /* can also use :nth-child(odd) */
+	/* background-color: ;   not working - table stripes */
+	background-color: #f7f7f7; /* table stripes #1 */
+}
+
+.log-table tr:nth-child(even) { /* table stripes #2 */
+	background-color: #ffffff; 
+}
+
+.log-table tr:hover { /* table highlighting on hover */
+	background-color: #ddd; 
+}
+
+/* .log-table thead { table heading
+	background-color: green; 
+	color: white;
+} */
+
+.log-table th { /* table headings */
+	background-color: #a8a195; /* table header row */
+	color: white;
+}
+
+table.log-table {
+	border-collapse: collapse; /* remove the double border from the table */
+}
+
+.table-buttons { /* buttons at bottom of table - select all etc. */
+	position: relative;
+	top: -30px;
+	right: -1300px;
+	display: inline;
+}
+
+.table-page-num { /* page numbers */
+	position: relative;
+	top: -30px;
+	right: -300px;
+	display: inline;
+}
+
+/* pagination */
+.pag-link {
+	padding: 0 2px;
+}
+
+.pag-active { /*active page number */
+	text-decoration: none;
+}
+
+/* Generic classes*/
+.inline-container { 
+	display: flex;
+}
+
+.btn {
+	
+}
+
+.banner-alert { /* To display config errors */
+	background-color: red; /* was black */
+	padding: 15px 10px;
+	width: 100%;
+	box-sizing: border-box; /* avoids scroll bar when 100% width */
+	display: block;
+}
+
+.banner-info { /* To display info */
+	background-color: #13d713; /* green */
+	padding: 15px 10px;
+	width: 100%;
+	box-sizing: border-box; /* avoids scroll bar when 100% width */
+}
+
+.banner-close { /* X to close the banner */
+	color: white;
+	position: absolute;
+	left: 95%;
+	cursor: pointer;
+	/*top: -1em; & radius 50% for circle?
+	 float: left; */
+	margin-top: -1%;
+}
+
+.banner-close:hover {
+	color: gray;
+	/* outline: 1px solid yellow; */
+}
+
+.white-txt {
+	color: white;
+}
+
+.red-txt {
+	color: red;
+}
+
+.green-txt {
+	color: #13d713;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/*footer*/
+footer p {
+	/* text-align: center; */
+	font-size: 10px;
+	/* margin: 50px auto; */
+}
+
+footer {
+	text-align: center;
+	font-size: 10px;
+	margin: 50px auto 0 auto;
+	position: relative; /*relative doesn't go to bottom if 0 logs are present */
+	width: 100%;
+	bottom: 0;
+	background-color: #353535;
+	color: white;
+	padding: 15px 5px;
+	box-sizing: border-box;
+}
+
+/* Login page */
+#login-form {
+	border: 2px solid white;
+	color: white;
+	width: 300px;
+	height: 200px;
+	position: relative;
+	margin: 100px auto;
+	border-radius: 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background-color: black
+}
+
+#login-page { /* login page body */
+	background-color: #353535;
+}
+
+.login-input-container input {
+	margin: 7px 2px;
+	height: 35px;
+	width: 90%
+}
+
+.login-input-container input[type=text]:focus, input[type=password]:focus {
+	outline: 1px solid orange;
+	/* border: 3px solid orange; */
+}
+
+.login-input-container {
+	display: block;
+}
+
+/*stats page*/
+/*Holds the stats page boxes*/
+.stats-info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 1300px;
+	margin: 0 auto; /*center the div in the page*/
+	justify-content: center; /*center the info boxes*/
+}
+
+.stat-box {
+	border: 2px solid #896937; /* #fff #cfcac2 */
+	background-color: #6a6a6a;
+	border-radius: 10px;
+	margin: 10px 15px;
+	/* text-align: center; */
+	min-width: 250px;
+	min-height: 20px;
+	line-height: 50px;
+	/*flex: 1; https://developer.mozilla.org/en-US/docs/Web/CSS/flex - auto stretch*/
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+	
+}
+
+.stat-box p {
+	color: white;
+	padding: 0 0 0 5px;
+}
+
+.stat-box h3 {
+	color: white;
+	padding: 0 0 0 5px;
+}
